@@ -1,15 +1,11 @@
 function isPalindrome(word) {
-  let length = word.length
-  for (let i = 0; i < length; i++){
-    if (word[i] == word[length - 1 - i]){
-      return true;
-    }
-    else if (word[i] !== word[length - 1- i]){
-      return false;
-    }
-  }
+  const reversed = reverseString(word);
+  return word === reversed;
 }
 
+function reverseString(word) {
+  return word.split("").reverse().join("");
+}
 
 
 // You can run `node index.js` to view these console logs
