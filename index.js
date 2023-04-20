@@ -1,14 +1,16 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  let length = word.length
+  for (let i = 0; i < length; i++){
+    if (word[i] == word[length - 1 - i]){
+      return true;
+    }
+    else if (word[i] !== word[length - 1- i]){
+      return false;
+    }
+  }
 }
 
-/* 
-  Add your pseudocode here
-*/
 
-/*
-  Add written explanation of your solution here
-*/
 
 // You can run `node index.js` to view these console logs
 if (require.main === module) {
